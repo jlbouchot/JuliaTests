@@ -58,13 +58,7 @@ p0 = p0 / norm(p0) # Normalization |p0|=1 for free final time
 ## Hamiltonian flow and shooting function
 
 function h(t, x, p)
-    pa = x[1]
-    ex = x[2]
-    ey = x[3]
-    hx = x[4]
-    hy = x[5]
-    lg = x[6]
-
+    pa, ex, ey, hx, hy, lg = x
     pdm = sqrt(pa/μ)
     cl = cos(lg)
     sl = sin(lg)
@@ -134,8 +128,8 @@ ey = ode_sol[3, :]
 hx = ode_sol[4, :]
 hy = ode_sol[5, :]
 L  = ode_sol[6, :]
-cL = cos.(L)
-sL = sin.(L)
+cL = @. cos(L)
+sL = @. sin(L)
 W  = @. 1 + ex*cL + ey*sL
 Z  = @. hx*sL - hy*cL
 C  = @. 1 + hx^2 + hy^2
