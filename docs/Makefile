@@ -13,3 +13,10 @@ julialib: $(OBJECTS)
  
 clean:
 	rm *.o *.so
+
+
+TREELIBSRC=treeBuilder.c
+TREEOBJECTS=$(TREELIBSRC:.c=.o)
+
+treelib: $(TREEOBJECTS)
+	$(CC) -shared -fPIC -o treelib.so $(TREEOBJECTS)
