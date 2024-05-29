@@ -20,3 +20,9 @@ TREEOBJECTS=$(TREELIBSRC:.c=.o)
 
 treelib: $(TREEOBJECTS)
 	$(CC) -shared -fPIC -o treelib.so $(TREEOBJECTS)
+
+CVTPLIBSRC=cvtp.c
+CVTPOBJECTS=$(CVTPLIBSRC:.c=.o)
+
+cvtplib: $(CVTPOBJECTS)
+	$(CC) -shared -fPIC -o cvtplib.so $(CVTPOBJECTS)
