@@ -1,5 +1,6 @@
-formalism of julia is
-   All ::= none map toplevel function curly linenumber float64 float32 float16 int64 int32 int16 int8 boolean ref block using vcat vect block return tuple call assign package;  --Add all operators
+definition of julia is
+  abstract syntax
+   All  ::= none map toplevel function curly linenumber float64 float32 float16 int64 int32 int16 int8 boolean ref block using vcat vect block return tuple call assign package ;  --Add all operators
 
    vect -> All * ... ; -- + instead of * if at least one element
    call -> All + ... ; -- should be + : at least one element is required
@@ -7,7 +8,7 @@ formalism of julia is
    package -> All ;
    using -> All ; -- Verify
    ref -> All All ;
-   block -> All * ...
+   block -> All * ... ;
    toplevel -> All * ... ;
    function -> All All ;
    curly -> All * ... ;
@@ -30,4 +31,4 @@ formalism of julia is
 
    none  -> ; -- Atom
 
-end
+end definition
