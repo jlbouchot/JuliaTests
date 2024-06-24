@@ -1,22 +1,22 @@
 definition of julia is
   abstract syntax
-   All  ::= none map toplevel function curly linenumber float64 float32 float16 int64 int32 int16 int8 boolean ref block using vcat vect block return tuple call assign package ;  --Add all operators
+   ALL  ::= none map toplevel function curly linenumber float64 float32 float16 int64 int32 int16 int8 boolean ref block using vcat vect block return tuple call assign package ;  --Add all operators
 
-   vect -> All * ... ; -- + instead of * if at least one element
-   call -> All + ... ; -- should be + : at least one element is required
-   assign -> All All ;
-   package -> All ;
-   using -> All ; -- Verify
-   ref -> All All ;
-   block -> All * ... ;
-   toplevel -> All * ... ;
-   function -> All All ;
-   curly -> All * ... ;
-   return -> All ;
-   toplevel -> All * ... ;
-   tuple -> All * ... ;
-   vcat -> All * ... ;
-   hcat -> All * ... ;
+   vect -> ALL * ... ; -- + instead of * if at least one element
+   call -> ALL + ... ; -- should be + : at least one element is required
+   assign -> ALL ALL ;
+   package -> ALL ;
+   using -> ALL ; -- Verify
+   ref -> ALL ALL ;
+   block -> ALL * ... ;
+   toplevel -> ALL * ... ;
+   function -> ALL ALL ;
+   curly -> ALL * ... ;
+   return -> ALL ;
+   toplevel -> ALL * ... ;
+   tuple -> ALL * ... ;
+   vcat -> ALL * ... ;
+   hcat -> ALL * ... ;
 
    -- linenumber -> ; -- CONTINUE
 
@@ -28,6 +28,7 @@ definition of julia is
    float64  -> implemented as STRING ;
    float32  -> implemented as STRING ;
    float16  -> implemented as STRING ;
+   ident  -> implemented as STRING ;
 
    none  -> ; -- Atom
 
