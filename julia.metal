@@ -5,14 +5,14 @@ definition of julia is
    vect -> ALL * ... ; -- + instead of * if at least one element
    call -> ALL + ... ; -- should be + : at least one element is required
    assign -> ALL ALL ;
-   package -> ALL ;
-   using -> ALL ; -- Verify
-   ref -> ALL ALL ;
+   package -> ALL * ... ;
+   using -> ALL * ... ; -- Verify
+   ref -> ALL * ... ;
    block -> ALL * ... ;
    toplevel -> ALL * ... ;
-   function -> ALL ALL ;
+   function -> ALL * ... ;
    curly -> ALL * ... ;
-   return -> ALL ;
+   return -> ALL * ... ;
    toplevel -> ALL * ... ;
    tuple -> ALL * ... ;
    vcat -> ALL * ... ;
