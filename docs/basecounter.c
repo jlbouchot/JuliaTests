@@ -21,6 +21,20 @@ bin_tree* new_tree(float v) {
 	return out;
 }
 
+typedef struct _boite{
+	int in;
+} boite;
+
+void* myobj(int n) {
+	boite* b = (boite*)malloc(sizeof(boite));
+	b->in = n;
+	return (void*)b;
+}
+
+void print_boite(boite* b){
+	printf("Boite is %d\n", b->in);
+}
+
 void print_to_the_left(bin_tree* tree) {
 	/* This is really just for some debugging nin Julia */
 	unsigned int child_nb = 0;

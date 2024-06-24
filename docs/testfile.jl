@@ -14,6 +14,13 @@ t0 = 0                                     # initial time (final time is free)
 x0 = [ 11.625, 0.75, 0, 6.12e-02, 0, π ]   # initial state (fixed initial longitude)
 xf_fixed = [ 42.165, 0, 0, 0, 0 ]          # final state (free final longitude)
 
+# Function without argument to see what happens
+function doubleTMax() 
+	return Tmax*2
+end
+
+dTmax = doubleTMax()
+
 # More involved data structures
 init = Dict{Real, Tuple{Real, Vector{Real}}}()
 

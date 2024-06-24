@@ -15,6 +15,12 @@ clean:
 	rm *.o *.so
 
 
+JULIALIBSRC=juliaUtils.c
+JULIAOBJECTS=$(TREELIBSRC:.c=.o)
+
+julialib.so: juliaUtils.c tablesjulia.c treeBuilder.c cvtp.c
+	$(CC) -shared -fPIC -o julialib.so juliaUtils.c treeBuilder.c cvtp.c
+
 TREELIBSRC=treeBuilder.c
 TREEOBJECTS=$(TREELIBSRC:.c=.o)
 
