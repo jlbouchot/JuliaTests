@@ -17,6 +17,7 @@ definition of julia is
    tuple -> ALL * ... ;
    vcat -> ALL * ... ;
    hcat -> ALL * ... ;
+   endOfList  ->  ;
 
    -- linenumber -> ; -- CONTINUE
 
