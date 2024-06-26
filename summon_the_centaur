@@ -4,3 +4,5 @@
 (initializemodule 'centaur/sources/syntax/parser/synch t t)
 (loadmodule 'metalcompiler () t)
 (setq tree (parse-file 'julia.metal (find-syntax 'METAL ()) ()))
+(#:metal:compile tree)
+
